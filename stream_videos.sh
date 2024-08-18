@@ -7,8 +7,8 @@
 #
 #  REQUIREMENTS:  ffmpeg, TwitchTV Stream Key
 #        AUTHOR:  gothickitty93, ChatGPT
-#       VERSION:  1.0
-#       LICENSE:
+#       VERSION:  1.0.1
+#       LICENSE:  This work is licensed under Creative Commons Attribution-ShareAlike 4.0 International
 #===========================================================
 # Function to stream the video
 stream_video() {
