@@ -7,7 +7,7 @@
 #
 #  REQUIREMENTS:  ffmpeg, TwitchTV Stream Key
 #        AUTHOR:  gothickitty93, ChatGPT
-#       VERSION:  4.1
+#       VERSION:  24.1103
 #       LICENSE:  
 #===========================================================
 # Function to stream the video
