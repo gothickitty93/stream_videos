@@ -7,13 +7,13 @@
 #
 #  REQUIREMENTS:  ffmpeg, TwitchTV Stream Key
 #        AUTHOR:  gothickitty93, ChatGPT
-#       VERSION:  24.1103
-#       LICENSE:  
+#       VERSION:  24.1126
+#       LICENSE:
 #===========================================================
 # Function to stream the video
 stream_video() {
   local file=$1
-  ffmpeg -re -i "$file" -vf "scale=-1:900" -r 60 -c:v h264_videotoolbox -b:v 6000k -maxrate 6000k -bufsize 12000k -g 120 -preset realtime -c:a copy -f flv rtmp://live.twitch.tv/app/live_stream_key
+  ffmpeg -re -i "$file" -vf "scale='if(gte(iw/ih,16/9),1600,-1)':'if(gte(iw/ih,16/9),-1,900)',pad=1600:900:(ow-iw)/2:(oh-ih)/2" -r 60 -c:v h264_videotoolbox -b:v 8000k -maxrate 8000k -bufsize 16000k -g 120 -preset high -c:a copy -f flv rtmp://live.twitch.tv/app/your_stream_key
 }
 
 # Get the list of video files in alphanumeric order
